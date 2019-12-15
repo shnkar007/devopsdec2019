@@ -1,0 +1,194 @@
+    1  sudo su
+    2  docker info
+    3  sudo docker info
+    4  sudo su
+    5  exit
+    6  docker info
+    7  clear
+    8  docker info > dockinfo.txt
+    9  ls -lrt
+   10  docker images
+   11  docker ps
+   12  docker ps -a
+   13  docker run centos
+   14  docker images
+   15  docker ps -a
+   16  docker run centos bash
+   17  docker ps -a
+   18  docker run -d centos bash
+   19  docker ps -a
+   20  history
+   21  docker run -it centos bash
+   22  docker run -dit nginx
+   23  docker start nginx
+   24  docker start pensive
+   25  docker ps
+   26  docker exec -it 5e9eb958209c bash
+   27  docker run busybox ping google.com
+   28  docker run httpd ping google.com
+   29  docker container run --publish 80:80 ngnix
+   30  docker ps -a
+   31  docker container run --publish 80:80 nginx
+   32  docker ps -a
+   33  docker ps
+   34  docker images
+   35  docker inspect 5e9eb958209c
+   36  docker inspect 5e9eb958209c > docker_inspect_nginx.txt
+   37  docker docker pull httpd 24
+   38  docker pull httpd:2.4
+   39  docker images
+   40  docker search httpd 2.4
+   41  docker search httpd:2.4
+   42  docker ps -a
+   43  docker stats
+   44  docker run -d --name webserver1 httpd
+   45  docker ps -a
+   46  docker images
+   47  docker exec -it webserver1
+   48  dcoker run -d --name web1 httpd
+   49  docker run -d --name web1 httpd
+   50  docker ps -a
+   51  clear
+   52  pwd
+   53  mkdir data
+   54  ls -ltr
+   55  chmod 777 data
+   56  docker ps -a
+   57  docker run -dit --name cloudnloud-web -p 8087:80 -v /var/tmp/:/usr/local/apache2/htdocs/ httpd:2.4
+   58  cd /var/tmp
+   59  ls
+   60  echo "Hello Sankar">index.html
+   61  ip -a
+   62  ip
+   63  docker run -dit --name altius-web -P  -v /var/tmp/:/usr/local/apache2/htdocs/ httpd:2.4
+   64  docker ps -a
+   65  sudo su
+   66  docker container run --publish 80:80 ngnix
+   67  docker ps -a
+   68  docker container run --publish 80:80 ngnix
+   69  docker container run --publish 80:80 --detach ngninx 
+   70  docker container run --publish 80:80 --detach nginx 
+   71  ls
+   72  vi docker_inspect_nginx.txt
+   73  curl -i 172.17.0.2
+   74  docker images
+   75  docker image insoect nginx
+   76  docker image inspect nginx
+   77  docker image inspect nginx>image_ngnix_report.json
+   78  ls
+   79  docker ps -a
+   80  docker system prune
+   81  docker image inspect nginx
+   82  docker system prune
+   83  docker ps -a
+   84  docker images
+   85  sudo apt install docker-compose
+   86  vi .virmc
+   87  ls
+   88  ls -a
+   89  vi docker-compose.yaml
+   90  sudo mkdir data
+   91  docker-compose up -d
+   92  docker ps -a
+   93  clear
+   94  curl 3djfd
+   95  dfjkjjjj
+   96  sudo apt install docker-compose
+   97  ls
+   98  curl -i 35.224.183.39
+   99  docker ps -a
+  100  curl -i 35.224.183.39:80
+  101  cat docker-compose.yaml
+  102  cd data
+  103  echo "hello" > index.html
+  104  curl -i 35.224.183.39:80
+  105  cd ..
+  106  git clone https://github.com/shnkar007/travis.git
+  107  ls
+  108  cd travis
+  109  ls
+  110  vi DockerFile
+  111  cat DockerFile
+  112  vi .travis.yml
+  113  git add .travis.yml DockerFile
+  114  git status
+  115  git commit -m "Travis Atutomation"
+  116  git status
+  117  git push
+  118  ls
+  119  mv DockerFile Dockerfile
+  120  ls
+  121  git add Dockerfile
+  122  git commit -m "Docker file renamed"
+  123  git push
+  124  ls
+  125  cat Dockerfile
+  126  pwd
+  127  cd /var/www/html/index/html
+  128  sudo su
+  129  ls
+  130  ls -a
+  131  cat Dockerfile
+  132  echo "sankar on travis">index.html
+  133  git add index.html
+  134  git commit -m "added index.html"
+  135  git push 
+  136  git pull
+  137  git push 
+  138  cat Dockerfile
+  139  cd ..
+  140  ls
+  141  docker images
+  142  docker pull shnkar007/travis:v1.0
+  143  docker images
+  144  docker run 16ab458a8e35
+  145  docker ps -a
+  146  docker exec -it 16ab458a8e35
+  147  docker stop 50b30cb9452b
+  148  docker ps -a
+  149  docker rm 50b30cb9452b
+  150  docker ps -a
+  151  docker images
+  152  docker run -dit 16ab458a8e35
+  153  docker ps -a
+  154  docker inspect 76eb99b18861
+  155  curl -i 172.17.0.4
+  156  cat .travis.yml
+  157  vi .travis.yml
+  158  ls
+  159  cd travis
+  160  ls
+  161  ls -a
+  162  cat .travis.yml
+  163  cat Dockerfile
+  164  curl -i 172.17.0.4
+  165  ls
+  166  echo "inex1">index1.html
+  167  ls
+  168  git add index1.html
+  169  git commit -m "added index htl"
+  170  git push
+  171  docker ps -a
+  172  docker rm 76eb99b18861
+  173  docker stop 76eb99b18861
+  174  docker rm 76eb99b18861
+  175  docker images
+  176  docker rm 16ab458a8e35
+  177  docker rmi 16ab458a8e35
+  178  vi Dockerfile
+  179  git add Dockerfile
+  180  git commit -m "changed dcoker file"
+  181  git push
+  182  docker images
+  183  docker pull shnkar007/travis:v1.0
+  184  docker images
+  185  docker run -dit dddf6193efc7
+  186  docker ps -a
+  187  curl -i 172.17.0.4
+  188  history > history_day2_1700.txt
+  189  git add history_day2_1700.txt 
+  190  pwd
+  191  cd ..
+  192  ls
+  193  cd devopsdec2019
+  194  history > history_day2_1700.txt
