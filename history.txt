@@ -1,0 +1,145 @@
+    1  sudo su
+    2  docker info
+    3  sudo docker info
+    4  sudo su
+    5  exit
+    6  docker info
+    7  clear
+    8  docker info > dockinfo.txt
+    9  ls -lrt
+   10  docker images
+   11  docker ps
+   12  docker ps -a
+   13  docker run centos
+   14  docker images
+   15  docker ps -a
+   16  docker run centos bash
+   17  docker ps -a
+   18  docker run -d centos bash
+   19  docker ps -a
+   20  history
+   21  docker run -it centos bash
+   22  docker run -dit nginx
+   23  docker start nginx
+   24  docker start pensive
+   25  docker ps
+   26  docker exec -it 5e9eb958209c bash
+   27  docker run busybox ping google.com
+   28  docker run httpd ping google.com
+   29  docker container run --publish 80:80 ngnix
+   30  docker ps -a
+   31  docker container run --publish 80:80 nginx
+   32  docker ps -a
+   33  docker ps
+   34  docker images
+   35  docker inspect 5e9eb958209c
+   36  docker inspect 5e9eb958209c > docker_inspect_nginx.txt
+   37  docker docker pull httpd 24
+   38  docker pull httpd:2.4
+   39  docker images
+   40  docker search httpd 2.4
+   41  docker search httpd:2.4
+   42  docker ps -a
+   43  docker stats
+   44  docker run -d --name webserver1 httpd
+   45  docker ps -a
+   46  docker images
+   47  docker exec -it webserver1
+   48  dcoker run -d --name web1 httpd
+   49  docker run -d --name web1 httpd
+   50  docker ps -a
+   51  clear
+   52  pwd
+   53  mkdir data
+   54  ls -ltr
+   55  chmod 777 data
+   56  docker ps -a
+   57  docker run -dit --name cloudnloud-web -p 8087:80 -v /var/tmp/:/usr/local/apache2/htdocs/ httpd:2.4
+   58  cd /var/tmp
+   59  ls
+   60  echo "Hello Sankar">index.html
+   61  ip -a
+   62  ip
+   63  docker run -dit --name altius-web -P  -v /var/tmp/:/usr/local/apache2/htdocs/ httpd:2.4
+   64  docker ps -a
+   65  sudo su
+   66  docker container run --publish 80:80 ngnix
+   67  docker ps -a
+   68  docker container run --publish 80:80 ngnix
+   69  docker container run --publish 80:80 --detach ngninx 
+   70  docker container run --publish 80:80 --detach nginx 
+   71  ls
+   72  vi docker_inspect_nginx.txt
+   73  curl -i 172.17.0.2
+   74  docker images
+   75  docker image insoect nginx
+   76  docker image inspect nginx
+   77  docker image inspect nginx>image_ngnix_report.json
+   78  ls
+   79  docker ps -a
+   80  docker system prune
+   81  docker image inspect nginx
+   82  docker system prune
+   83  docker ps -a
+   84  docker images
+   85  docker info
+   86  clear
+   87  docker commit -c 'CMD ["/usr/sbin/httpd","-D","FOREGROUND"]' zen_mayer
+   88  docker images
+   89  docker run 96b0d61e622a
+   90  docker run -dit 96b0d61e622a
+   91  docker ps -a
+   92  pwd
+   93  cd /etc
+   94  touch sanker.txt
+   95  cd ..
+   96  pwd
+   97  cd /home/sankarraman_vedagiri
+   98  ls
+   99  docker search centos
+  100  docker ps -a
+  101  docker images
+  102  docker history
+  103  docker history 96b0d61e622a
+  104  clear
+  105  sudo su root
+  106  docker images
+  107  vi Dockerfile
+  108  docker build .
+  109  docker images
+  110  echo "sankar" > index.html
+  111  docker build .
+  112  docker images
+  113  docker pull bvijaycom/cloud_local:v2.0
+  114  docker images
+  115  docker build -t shnkar007/sample:v1.0 .
+  116  docker images
+  117  docker login
+  118  docker push shnkar007/sample:v1.0
+  119  docker build -t shnkar007/sample:v1.1 .
+  120  docker push shnkar007/sample:v1.1
+  121  docker search shnkar007/sample:v1.0
+  122  docker push shnkar007/sample:latest
+  123  docker build -t shnkar007/sample:latest .
+  124  docker push shnkar007/sample:latest
+  125  docker pull angurajmurugesan/my_ubuntu:latest
+  126  docker images
+  127  git clone https://github.com/shnkar007/devopsdec2019.git
+  128  ls
+  129  git status
+  130  cd devopsdec2019/
+  131  touch test
+  132  git status
+  133  git add *
+  134  git config --global user.email "shnkar007@hotmail.com"
+  135  git config --global user.name "sankar"
+  136  git commit -m "first commit from sankar"
+  137  git status
+  138  git push
+  139  git status
+  140  git log
+  141  git pull
+  142  ls
+  143  git log
+  144  history
+  145  history > history.txt
