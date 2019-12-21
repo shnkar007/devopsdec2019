@@ -1,0 +1,15 @@
+NAMESPACE     NAME                             READY   STATUS    RESTARTS   AGE
+kube-system   coredns-6955765f44-j5qc9         1/1     Running   0          33m
+kube-system   coredns-6955765f44-tcvk8         1/1     Running   0          33m
+kube-system   etcd-master                      1/1     Running   0          33m
+kube-system   kube-apiserver-master            1/1     Running   0          33m
+kube-system   kube-controller-manager-master   1/1     Running   0          33m
+kube-system   kube-proxy-58khk                 1/1     Running   0          33m
+kube-system   kube-proxy-cmdfb                 1/1     Running   0          30m
+kube-system   kube-proxy-g9xvf                 1/1     Running   0          17m
+kube-system   kube-proxy-x99b6                 1/1     Running   0          30m
+kube-system   kube-scheduler-master            1/1     Running   0          33m
+kube-system   weave-net-8l8rh                  2/2     Running   0          27m
+kube-system   weave-net-bstgp                  2/2     Running   0          27m
+kube-system   weave-net-fb2q5                  2/2     Running   1          17m
+kube-system   weave-net-hvq4h                  2/2     Running   0          27m

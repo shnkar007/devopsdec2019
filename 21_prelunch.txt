@@ -1,0 +1,36 @@
+    1  sudo su
+    2  mkdir -p $HOME/.kube
+    3  kubectl get nodes
+    4  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+    5  kubectl get nodes
+    6  kubeadm token create --print-join-command
+    7  kubectl get nodes
+    8  kubectl get version
+    9  kubectl version
+   10  kubectl get-info
+   11  kubectl cluster-info
+   12  kubectl get pods -n kube-system
+   13  kubectl get events
+   14  kubectl get events>events.txt
+   15  ls -l
+   16  ls -a
+   17  history>kubeMaster.txt
+   18  kubectl get nodes
+   19  kubectl get pods --all-namespaces
+   20  kubectl get pods --all-namespaces>kuballNamespaces.txt
+   21  kubectl get nodes --show-labels>showLabels.txt
+   22  ls -a
+   23  kubectl get pods --all-namespaces -o wide
+   24  cat showLabels.txt 
+   25  kubectl get nodes --show-labels -o wide>showLabels.txt
+   26  cat showLabels.txt 
+   27  kubectl get namespaces
+   28  kubectl create ns dev
+   29  kubectl create ns uat
+   30  kubectl create ns prod
+   31  kubectl get namespaces
+   32  kubectl cluster-info
+   33  kubectl get pods -n kube-system
+   34  kubectl get pods -n kube-system -o wide
+   35  kubectl get events
+   36  history > 21_prelunch.txt

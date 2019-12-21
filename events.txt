@@ -1,0 +1,36 @@
+LAST SEEN   TYPE     REASON                    OBJECT        MESSAGE
+30m         Normal   NodeHasSufficientMemory   node/master   Node master status is now: NodeHasSufficientMemory
+30m         Normal   NodeHasNoDiskPressure     node/master   Node master status is now: NodeHasNoDiskPressure
+30m         Normal   NodeHasSufficientPID      node/master   Node master status is now: NodeHasSufficientPID
+29m         Normal   Starting                  node/master   Starting kubelet.
+29m         Normal   NodeHasSufficientMemory   node/master   Node master status is now: NodeHasSufficientMemory
+29m         Normal   NodeHasNoDiskPressure     node/master   Node master status is now: NodeHasNoDiskPressure
+29m         Normal   NodeHasSufficientPID      node/master   Node master status is now: NodeHasSufficientPID
+29m         Normal   NodeAllocatableEnforced   node/master   Updated Node Allocatable limit across pods
+29m         Normal   RegisteredNode            node/master   Node master event: Registered Node master in Controller
+29m         Normal   Starting                  node/master   Starting kube-proxy.
+23m         Normal   NodeReady                 node/master   Node master status is now: NodeReady
+27m         Normal   Starting                  node/node-1   Starting kubelet.
+27m         Normal   NodeHasSufficientMemory   node/node-1   Node node-1 status is now: NodeHasSufficientMemory
+27m         Normal   NodeHasNoDiskPressure     node/node-1   Node node-1 status is now: NodeHasNoDiskPressure
+27m         Normal   NodeHasSufficientPID      node/node-1   Node node-1 status is now: NodeHasSufficientPID
+27m         Normal   NodeAllocatableEnforced   node/node-1   Updated Node Allocatable limit across pods
+27m         Normal   RegisteredNode            node/node-1   Node node-1 event: Registered Node node-1 in Controller
+26m         Normal   Starting                  node/node-1   Starting kube-proxy.
+23m         Normal   NodeReady                 node/node-1   Node node-1 status is now: NodeReady
+26m         Normal   Starting                  node/node-2   Starting kubelet.
+26m         Normal   NodeHasSufficientMemory   node/node-2   Node node-2 status is now: NodeHasSufficientMemory
+26m         Normal   NodeHasNoDiskPressure     node/node-2   Node node-2 status is now: NodeHasNoDiskPressure
+26m         Normal   NodeHasSufficientPID      node/node-2   Node node-2 status is now: NodeHasSufficientPID
+26m         Normal   NodeAllocatableEnforced   node/node-2   Updated Node Allocatable limit across pods
+26m         Normal   RegisteredNode            node/node-2   Node node-2 event: Registered Node node-2 in Controller
+26m         Normal   Starting                  node/node-2   Starting kube-proxy.
+23m         Normal   NodeReady                 node/node-2   Node node-2 status is now: NodeReady
+13m         Normal   Starting                  node/node-3   Starting kubelet.
+13m         Normal   NodeHasSufficientMemory   node/node-3   Node node-3 status is now: NodeHasSufficientMemory
+13m         Normal   NodeHasNoDiskPressure     node/node-3   Node node-3 status is now: NodeHasNoDiskPressure
+13m         Normal   NodeHasSufficientPID      node/node-3   Node node-3 status is now: NodeHasSufficientPID
+13m         Normal   NodeAllocatableEnforced   node/node-3   Updated Node Allocatable limit across pods
+13m         Normal   RegisteredNode            node/node-3   Node node-3 event: Registered Node node-3 in Controller
+13m         Normal   Starting                  node/node-3   Starting kube-proxy.
+13m         Normal   NodeReady                 node/node-3   Node node-3 status is now: NodeReady
