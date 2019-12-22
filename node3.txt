@@ -1,0 +1,36 @@
+    1  sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+    2  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+    3  cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    4  deb https://apt.kubernetes.io/ kubernetes-xenial main
+    5  EOF
+    6  sudo apt-get update
+    7  sudo apt-get install -y kubelet kubeadm kubectl
+    8  sudo apt-mark hold kubelet kubeadm kubectl
+    9  apt-get update && apt-get install   apt-transport-https ca-certificates curl software-properties-common
+   10  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+   11  add-apt-repository   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   12    $(lsb_release -cs) \
+   13    stable"
+   14  apt-get update && apt-get install   containerd.io=1.2.10-3   docker-ce=5:19.03.4~3-0~ubuntu-$(lsb_release -cs)   docker-ce-cli=5:19.03.4~3-0~ubuntu-$(lsb_release -cs)
+   15  cat > /etc/docker/daemon.json <<EOF
+   16  {
+   17    "exec-opts": ["native.cgroupdriver=systemd"],
+   18    "log-driver": "json-file",
+   19    "log-opts": {
+   20      "max-size": "100m"
+   21    },
+   22    "storage-driver": "overlay2"
+   23  }
+   24  EOF
+   25  mkdir -p /etc/systemd/system/docker.service.d
+   26  systemctl daemon-reload
+   27  systemctl restart docker
+   28  systemctl restart kubelet
+   29  kubeadm join 10.142.0.5:6443 --token npmjve.u96er8heczxgipy3     --discovery-token-ca-cert-hash sha256:4abb31e5f1cc55fbc683f8984e558124cf6fe175ec3aef56da7a30bad5c0d2b0
+   30  history>node3history.txt
+   31  exit
+   32  kubeadm reset
+   33  kubeadm join 10.142.0.5:6443 --token jeg4yg.1thg35320ddv3vj6     --discovery-token-ca-cert-hash sha256:4abb31e5f1cc55fbc683f8984e558124cf6fe175ec3aef56da7a30bad5c0d2b0
+   34  exit
+   35  history
+   36  history > node3.txt
