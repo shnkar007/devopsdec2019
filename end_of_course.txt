@@ -1,0 +1,336 @@
+    1  sudo su
+    2  mkdir -p $HOME/.kube
+    3  kubectl get nodes
+    4  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+    5  kubectl get nodes
+    6  kubeadm token create --print-join-command
+    7  kubectl get nodes
+    8  kubectl get version
+    9  kubectl version
+   10  kubectl get-info
+   11  kubectl cluster-info
+   12  kubectl get pods -n kube-system
+   13  kubectl get events
+   14  kubectl get events>events.txt
+   15  ls -l
+   16  ls -a
+   17  history>kubeMaster.txt
+   18  kubectl get nodes
+   19  kubectl get pods --all-namespaces
+   20  kubectl get pods --all-namespaces>kuballNamespaces.txt
+   21  kubectl get nodes --show-labels>showLabels.txt
+   22  ls -a
+   23  kubectl get pods --all-namespaces -o wide
+   24  cat showLabels.txt 
+   25  kubectl get nodes --show-labels -o wide>showLabels.txt
+   26  cat showLabels.txt 
+   27  kubectl get namespaces
+   28  kubectl create ns dev
+   29  kubectl create ns uat
+   30  kubectl create ns prod
+   31  kubectl get namespaces
+   32  kubectl cluster-info
+   33  kubectl get pods -n kube-system
+   34  kubectl get pods -n kube-system -o wide
+   35  kubectl get events
+   36  history > 21_prelunch.txt
+   37  exit
+   38  kubectl get nodes
+   39  pwd
+   40  vim .vimrc
+   41  source .vimrc
+   42  kubectl get ns
+   43  kubectl delete ns uat
+   44  kubectl delete ns prod
+   45  kubectl get ns
+   46  vim namespace.yaml
+   47  kubectl apply -f namespace.yaml
+   48  kubectl get ns
+   49  kubectl get all -n facebook
+   50  kubectl get all -n default
+   51  ls -a
+   52  vim singlepod.yaml
+   53  kubectl apply -f singlepod.yaml
+   54  kubectl get all -n twitter -l app=nginx
+   55  vi singlepod.yaml 
+   56  kubectl apply -f singlepod.yaml
+   57  kubectl get all
+   58  kubectl get all -n twitter -l app=sankar
+   59  docker ps -a
+   60  sudo docker ps -a
+   61  clear
+   62  vim multicontainerpod.yaml
+   63  kubectl get all
+   64  kubectl get all -n twitter -l app=sankar
+   65  kubectl describe pod/appserver
+   66  kubectl describe pod/appserver -n twitter
+   67  ls -a
+   68  kubectl apply -f multicontainerpod.yaml
+   69  kubectl get all -n facebook
+   70  kubectl describe pod/multicontainer-pods -n facebook
+   71  vim multipods.yaml
+   72  vim multipods.yaml
+   73  kubectl apply -f multipods.yaml
+   74  kubectl get all -n twitter
+   75  kubectl describe pod/multicontainer-pods -n twitter
+   76  kubectl get all -n twitter
+   77  kubectl create ns third
+   78  kubectl get all -n twitter
+   79  kubectl get events
+   80  kubectl get events -n twitter
+   81  kubectl exec -it pod/multicontainer-pods bash -n twitter -c web
+   82  kubectl exec -it pod/multicontainer-pods bash -n twitter -c db
+   83  git clone https://github.com/shnkar007/devopsdec2019.git
+   84  ls -a 
+   85  cat kubeMaster.txt
+   86  git add kubeMaster.txt
+   87  ls
+   88  vim storage.yaml
+   89  ls -ltr
+   90  kubectly apply -f storage.yaml
+   91  kubectl apply -f storage.yaml
+   92  kubectl get all -n twitter
+   93  ls /var/lib
+   94  kubectl get all -n twitter -o wide
+   95  vim multistorage.yaml
+   96  kubectl apply -f  multistorage.yaml
+   97  kubectl get all -n facebook -o wide
+   98  sudo su
+   99  kubectl get all -n facebook -o wide
+  100  kubectl delete -ns facebook
+  101  kubectl delete -n facebook
+  102  ls
+  103  pwd
+  104  kubectl get all -n facebook -o wide
+  105  kubectl delete -ns facebook
+  106  kubectl get all -n facebook -o wide
+  107  vim multistorage.yaml
+  108  kubectl apply -f  multistorage.yaml
+  109  kubectl get all -n facebook -o wide
+  110  kubectl delete pod/db -facebook
+  111  kubectl delete pod/db -n facebook
+  112  kubectl get all -n facebook -o wide
+  113  kubectl logs pod/multicontainer-pods -n facebook -c web
+  114  kubectl logs pod/db1 -facebook -c web
+  115  kubectl logs pod/db1 -facebook -c db
+  116  kubectl logs pod/db1 - n facebook -c db
+  117  kubectl logs pod/db1 -c db
+  118  pwd
+  119  ls
+  120  cd devopsdec2019
+  121  git add kubeMaster.txt
+  122  git add ./kubeMaster.txt
+  123  cd ..
+  124  git add *.txt
+  125  vim nodeport_fb.yaml
+  126  kubectl apply -f  nodeport_fb.yaml
+  127  kubectl get all -n facebook -o wide
+  128  curl 10.96.180.155
+  129  vim nodeport_tw.yaml
+  130  kubectl apply -f  nodeport_tw.yaml
+  131  vim nodeport_tw.yaml
+  132  kubectl apply -f  nodeport_tw.yaml
+  133  kubectl get all -n twitter -o wide
+  134  kubectl get pods,service -n twitter -o wide
+  135  kubectl get all -n twitter -o wide
+  136  git pull
+  137  cd devopsdec2019/
+  138  git pull
+  139  git add *.txt
+  140  git commit -m "new files added on 21 Dec"
+  141  git config --global user.email "shnkar007@hotmail.com"
+  142  git config --global user.name "Sankar"
+  143  git push
+  144  cd ..
+  145  ls
+  146  git add *.txt
+  147  cd devopsdec2019/
+  148  ls
+  149  git add ./*.txt
+  150  git commit -m "21_12"
+  151  git push
+  152  mv ./*.txt  .
+  153  ls
+  154  cd ..
+  155  ls 
+  156  cp *.txt devopsdec2019/.
+  157  cd devopsdec2019/
+  158  ls
+  159  git add 21_prelunch.txt 
+  160  git add events.txt 
+  161  git add kubeMaster.txt
+  162  git add kuballNamespaces.txt 
+  163  git add showLabels.txt
+  164  git commit -m "21_12"
+  165  git push
+  166  kubectl get nodes
+  167  ip a
+  168  cd devopsdec2019/
+  169  git pull
+  170  clear
+  171  cd ..
+  172  kubectl get all
+  173  kubectl get nodes
+  174  kubectl get nodes -o wide
+  175  vim singlereplica.yaml
+  176  kubectl delete ns twitter
+  177  kubectl get ns
+  178  kubectl delete ns twitter
+  179  kubectl delete ns twitter --force
+  180  vim singlereplica.yaml
+  181  kubectl apply -f  singlereplica.yaml
+  182  kubectl create ns twitter1
+  183  kubectl apply -f  singlereplica.yaml
+  184  kubectl get all -n twitter -o wide
+  185  kubectl get all -n twitter1 -o wide
+  186  vim singlerepelica.yaml
+  187  vim singlereplica.yaml
+  188  kubectl apply -f  singlereplica.yaml
+  189  kubectl get all -n twitter1 -o wide
+  190  vim singlereplica.yaml
+  191  kubectl get all -n twitter1 -o wide
+  192  vim singlereplica.yaml 
+  193  kubectl get all -n twitter1 -o wide
+  194  kubectl apply -f  singlereplica.yaml
+  195  kubectl get all -n twitter1 -o wide
+  196  kubectl edit replicaset.apps/nginx-replica -ns twitter1
+  197  kubectl edit replicaset.apps/nginx-replica -n twitter1
+  198  kubectl get all -n twitter1 -o wide
+  199  kubectl delete pod/nginx-replica-hldkd -n twitter1
+  200  kubectl get all -n twitter1 -o wide
+  201  kubectl delete pod/nginx-replica-vc6st -n twitter1
+  202  kubectl get all -n twitter1 -o wide
+  203  kubectl get replicas
+  204  kubectl get replicas -n twitter1
+  205  kubectl get replica -n twitter1
+  206  vim singlepodreplica.yaml
+  207  kubectl apply -f  singlepodreplica.yaml
+  208  vim singlepodreplica.yaml
+  209  kubectl apply -f  singlepodreplica.yaml
+  210  vim singlepodreplica.yaml
+  211  rm singlepodreplica.yaml
+  212  vim singlepodreplica.yaml
+  213  kubectl apply -f  singlepodreplica.yaml
+  214  vim singlopdreplica.yaml
+  215  vim singlepodreplica.yaml
+  216  kubectl apply -f  singlepodreplica.yaml
+  217  vim singlepodreplica.yaml
+  218  kubectl apply -f  singlepodreplica.yaml
+  219  vim singlepodreplica.yaml
+  220  kubectl apply -f  singlepodreplica.yaml
+  221  vim singlepodreplica.yaml
+  222  kubectl apply -f  singlepodreplica.yaml
+  223  kubectl get all -n facebook -o wide
+  224  kubectl edit replicaset.apps/httpd-replica -n facebook
+  225  kubectl get all -n facebook -o wide
+  226  vim fb-deployments.yaml
+  227  kubectl delete ns facebook --force
+  228  kubectl delete ns facebook
+  229  vim fb-deployments.yaml
+  230  create ns facebook1
+  231  kubectl create ns facebook1
+  232  kubectlk apply -f fb-deployments.yaml -n facebook1
+  233  kubectl apply -f fb-deployments.yaml -n facebook1
+  234  vim fb-deployments.yaml 
+  235  kubectl delete ns facebook1
+  236  kubectl create ns facebook1
+  237  kubectl apply -f fb-deployments.yaml -n facebook1
+  238  kubectl get all -n facebook1 -o wide
+  239  kubectl delete ns facebook1
+  240  vim fb-deployments.yaml 
+  241  kubectl create ns facebook1
+  242  kubectl apply -f fb-deployments.yaml -n facebook1
+  243  kubectl get all -n facebook1 -o wide
+  244  kubectl describe pod/nginx-7c6577847d-ls5sw -n facebook1
+  245  vim tw-deployments.yaml
+  246  clear
+  247  vim tw-deployments.yaml
+  248  kubectl apply -f tw-deployments.yaml -n twitter1
+  249  kubectl get all -n twitter1 -o wide
+  250  kubectl describe pod/nginx-74fcc59689-gbkb5 -n twitter1
+  251  kubectl delete ns twitter1
+  252  kubctl create ns twitter1
+  253  kubectl create ns twitter1
+  254  vim tw-deployments.yaml
+  255  kubectl apply -f tw-deployments.yaml -n twitter1
+  256  watch -n 1 kubectl get  pod,deploy,rs,svc --show-labels
+  257  watch -n 1 kubectl get  pod,deploy,rs,svc --show-labels -n twitter1
+  258  kubectl rollout history deploy/nginx -n facebook
+  259  watch -n 1 kubectl get  pod,deploy,rs,svc --show-labels -n twitter1
+  260  kubectl delete ns twitter1
+  261  kubectl create ns twitter1
+  262  vim tw-deployments.yaml
+  263  kubectl apply -f tw-deployments.yaml -n twitter1
+  264  vim tw-deployments.yaml
+  265  kubectl apply -f tw-deployments.yaml -n twitter1
+  266  vim tw-deployments.yaml
+  267  kubectl apply -f tw-deployments.yaml -n twitter1
+  268  vim tw-deployments.yaml
+  269  kubectl apply -f tw-deployments.yaml -n twitter1
+  270  kubectl rollout status deployment/nginx -n twitter1
+  271  vim tw-deployments.yaml
+  272  kubectl rollout status deployment/nginx -n twitter1
+  273  kubectl rollout status deployment/nginx -n twitter1
+  274  kubectl scale deployment/nginx --replicas=12
+  275  kubectl scale deployment/nginx --replicas=12 -n twitter1
+  276  kubectl get all -n twitter1 -o wide
+  277  kubectl describe pod/nginx-6bb556f6db-29b75 -n twitter1
+  278  kubectl rollout undo deployment nginx --to-revision=1 -n twitter1
+  279  kubectl rollout history deploy/nginx -n twitter1
+  280  kubectl rolloutstatus
+  281  kubectl rollout history deploy/nginx -n facebook
+  282  kubectl rollout history deploy/nginx -n twitter1
+  283  kubectl rollout undo deployment nginx --to-revision=3 -n twitter1
+  284  kubectl rollout history deploy/nginx -n twitter1
+  285  kubectl get all -n twitter1
+  286  kubectl describe pod/nginx-6bb556f6db-bzl5q -n twitter1
+  287  kubectl edit deploy/nginx -n twitter1
+  288  kubectl get nodes
+  289  kubectl get daemonset
+  290  kubectl get nodes
+  291  vim daemonset.yaml
+  292  kubeadm apply -f daemonset.yaml
+  293  kubectl apply -f daemonset.yaml
+  294  kubeadm token create --print-joincommand
+  295  kubeadm token create --print-join-command
+  296  kubectl get nodes
+  297  kubectl get all -o wide
+  298  kubectl get daemonset
+  299  kubectl get daemonset -o wide
+  300  kubectl describe daemonsets
+  301  kubectl get all 
+  302  kubectl create -ns init
+  303  kubectl create -namespace init
+  304  kubectl create ns init
+  305  vim node.yaml
+  306  kubectl apply -f node.yaml -n init
+  307  kubectl get all
+  308  kubectl get all -n init
+  309  vim redis.yaml
+  310  kubectl apply -f redis.yaml -n init
+  311  kubectl get all -n init
+  312  watch kubectl get all -n init
+  313  kubectl delete -ns twitter1
+  314  kubectl delete ns twitter1
+  315  kubectl create ns twitter1
+  316  vim hpa.yaml
+  317  kubectl apply -f hpa.yaml -n twitter1
+  318  watch kubectl get all -n twitter1
+  319  kubectl get all -n twitter1
+  320  vim hpa.yaml
+  321  kubectl delete hpa.yaml -n twitter1
+  322  kubectl delete hpa.yaml
+  323  kubectl delete hpa.yaml -n twitter1
+  324  kubectl delete ns twitter1
+  325  vim hpa.yaml
+  326  rm hpa.yaml
+  327  vim hpa.yaml
+  328  cat hpa.yaml
+  329  kubectl create ns twitter1
+  330  kubectl apply -f hpa.yaml -n twitter1
+  331  vim hpa.yaml
+  332  kubectl apply -f hpa.yaml -n twitter1
+  333  kubectl get all -n twitter1
+  334  kubectl get nodes
+  335  history
+  336  history>end_of_course.txt
