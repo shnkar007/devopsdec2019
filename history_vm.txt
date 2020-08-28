@@ -1,0 +1,47 @@
+    1  docker info
+    2  apt install docker.io
+    3  docker --version
+    4  docker run hello-world
+    5  docker pull sample
+    6  docker login
+    7  docker pull sample
+    8  docker run sample
+    9  docker ps
+   10  docker images
+   11  docker info
+   12  java -version
+   13  apt install openjdk-11-jre-headless
+   14  java -version
+   15  vi Hello.java
+   16  javac Hello.java
+   17  apt install openjdk-11-jdk-headless
+   18  javac Hello.java
+   19  java Hello
+   20  hostname
+   21  ifconfig
+   22  ipconfig
+   23  clear
+   24  exit
+   25  pwd
+   26  docker run hello-world
+   27  jenkins
+   28  ls
+   29  exit
+   30  pwd
+   31  cp history_vm.txt /devopsdec2019/.
+   32  cp history_vm.txt /devopsdec2019/history_vm.txt
+   33  touch history_vm.txt
+   34  mv history_vm.txt /devopdec2019/history_vm1.txt
+   35  mv history_vm.txt /devopdec2019/
+   36  mv history_vm.txt /devopdec2019
+   37  ls
+   38  cd devopsdec2019/
+   39  ls
+   40  cd ..
+   41  ls
+   42  history > history_vm.txt
+   43  ls
+   44  mv history_vm.txt /devopsdec2019
+   45  cd devopsdec2019/
+   46  ls
+   47  history > history_vm.txt
